@@ -1,0 +1,84 @@
+/*Délimitation des cases autour du tab*/
+.corner {
+	border-top: 1px solid black !important;
+	border-right : 1px solid black !important;
+	border-left: 1px solid black !important;
+	border-bottom: 1px solid black !important;
+	height: 100px !important;
+	width: 100px !important;
+	background-color: yellowgreen;
+}
+
+.right {
+	border-right: 1px solid black !important;
+}
+
+.bottom {
+	border-bottom: 1px solid black !important;
+}
+
+.bottom-right {
+	border-right: 1px solid black !important;
+	border-bottom: 1px solid black !important;
+}
+
+.none {
+	border: 0px !important;
+}
+
+/*plateau de jeu*/
+
+#monop {
+	height: 55%;
+	margin-left: 1%;
+	margin-top: 13%;
+}
+
+/*
+td, th {
+	background-color: yellowgreen;
+}
+
+#player_board {
+	width: 20%;
+	position: relative;
+	top: 125px;
+	right: 260px;
+}*/
+
+#departure {
+	background-color: red;
+}
+
+#wind {
+	background-color: lightblue;
+}
+
+#gaz {
+	background-color: brown;
+}
+
+#chemistry {
+	background-color: magenta;
+}
+
+#recy {
+	background-color: orange;
+}
+
+#geo {
+	background-color: green;
+}
+
+#water {
+	background-color: blue;
+}
+
+#nuke {
+	background-color: grey;
+}
+
+#sun {
+	background-color: yellow;
+}
+

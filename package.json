@@ -1,0 +1,50 @@
+{
+    "name": "monopoly-front",
+    "version": "0.0.0",
+    "description": "Travaux pratiques pour angularJS",
+    "main": "bundle.js",
+    "dependencies": {
+        "angular": "1.5.9",
+        "angular-bootstrap-npm": "^0.14.3",
+        "angular-ui-bootstrap": "^2.0.0",
+        "autoprefixer-loader": "^3.2.0",
+        "babel": "^6.5.2",
+        "babel-core": "^6.9.0",
+        "babel-loader": "^6.2.4",
+        "babel-polyfill": "^6.9.1",
+        "babel-preset-es2015": "^6.9.0",
+        "babel-preset-stage-0": "^6.5.0",
+        "bootstrap": "^3.3.6",
+        "css-loader": "^0.23.1",
+        "file-loader": "^0.8.5",
+        "font-awesome": "^4.7.0",
+        "html-loader": "^0.4.3",
+        "intl": "^1.2.5",
+        "jquery": "^2.2.4",
+        "lodash": "^4.12.0",
+        "path": "^0.12.7",
+        "rangy": "^1.3.0",
+        "style-loader": "^0.13.1",
+        "uglify-loader": "^1.3.0",
+        "url-loader": "^0.5.7",
+        "webpack": "^1.13.0",
+        "yargs": "^4.7.1"
+    },
+    "devDependencies": {
+        "concurrently": "^3.1.0",
+        "html-webpack-plugin": "^2.24.1",
+        "less": "^2.7.1",
+        "less-loader": "^2.2.3",
+        "string-replace-webpack-plugin": "0.0.4",
+        "webpack-dev-server": "^1.16.2"
+    },
+    "scripts": {
+        "start": "concurrently --kill-others \"webpack --watch\" \"webpack-dev-server --inline --colors\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://---.git"
+    },
+    "keywords": []
+}

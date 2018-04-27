@@ -1,0 +1,61 @@
+#
+# Covers project requirements
+#
+node_modules/
+dist
+
+#
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+#
+
+# User-specific stuff:
+*.iml
+.idea/
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Gradle:
+.idea/gradle.xml
+.idea/libraries
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+#
+# Covers Oracle SQL Developer Data Modeler
+#
+dmd_open.local
+BackOffice/npm-debug.log.104755256
+BackOffice/npm-debug.log.1078630581
+BackOffice/npm-debug.log.1124403154
+BackOffice/npm-debug.log.3605482562
+BackOffice/npm-debug.log.3758255907
+BackOffice/npm-debug.log.1853817389
+csv2labels.7z

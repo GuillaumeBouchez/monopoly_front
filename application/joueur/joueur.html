@@ -1,0 +1,27 @@
+<table id="player_board" class="table table-bordered">
+	<thead>
+		<tr ng-repeat="joueur in $ctrl.joueurs">
+			<td>
+				Joueur : {{joueur.id}}
+			</td>
+			<td>
+				Position : {{joueur.position}}
+			</td>
+			<td>
+				Nom : {{joueur.nom}}
+			</td>
+			<td>
+				Pion : {{joueur.pion}}
+			</td>
+			<td>
+				Solde : {{joueur.solde}}
+			</td>
+			<td>
+				Cartes : {{joueur.listeCarte}}
+			</td>
+			<td>
+				Proprietes : {{joueur.listePropriete}}
+			</td>
+		</tr>
+    </thead>
+</table>
