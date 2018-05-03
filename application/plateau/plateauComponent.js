@@ -2,7 +2,7 @@ import plateauHTML from "./plateau.html";
 
 class PlateauComponentController {
 	constructor(dataService) {
-		this.parkGratuitBinding = "Parking Gratuit";
+		this.parkGratuitBinding = "Parking Gratuit bind";
 		this.dataService = dataService;
 	}
 	
@@ -15,6 +15,8 @@ class PlateauComponentController {
 		.catch(error => {
             console.log('Erreur sur le tableau', error);
         })
+		
+		
 	}
 	
 }

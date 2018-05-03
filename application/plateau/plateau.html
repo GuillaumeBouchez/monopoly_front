@@ -21,70 +21,69 @@
 	<table id="board" class="table table-bordered">
 		<thead>
 		  <tr>
-			<td class="corner" scope="col"><park-gratuit class="park-gratuit" data-one-way-binding="$ctrl.parkGratuitBinding"></park-gratuit></td>
-			<td id="geo" class="corner" scope="col"><case-geo class="case-geo"></case-geo></td>
-			<td class="corner" scope="col">Case</td>
-			<td id="geo" class="corner" scope="col"><case-geo2 class="case-geo"></case-geo2></td>
-			<td id="geo" class="corner" ><case-geo3 class="case-geo"></case-geo3></td>
-			<td class="corner" >Case</td>
-			<td id="sun" class="corner" ><case-solaire class="case-solaire"></case-solaire></td>
-			<td class="corner" >Case</td>
-			<td id="sun" class="corner" ><case-solaire2 class="case-solaire"></case-solaire2></td>
-			<td id="sun" class="corner" ><case-solaire3 class="case-solaire"></case-solaire3></td>
-			<td class="corner" ><go-prison class="go-prison"></go-prison></td>
+			<td class="corner" scope="col">					<case-speciale data-ma-case="$ctrl.cases[20]"></case-speciale>			</td>
+			<td id="geo" class="corner" scope="col">		<case-prop data-ma-case="$ctrl.cases[21]"></case-prop>					</td>
+			<td class="corner" scope="col">					<case-speciale data-ma-case="$ctrl.cases[22]"></case-speciale>			</td>
+			<td id="geo" class="corner" scope="col">		<case-prop data-ma-case="$ctrl.cases[23]"></case-prop>					</td>
+			<td id="geo" class="corner" >					<case-prop data-ma-case="$ctrl.cases[24]"></case-prop>					</td>
+			<td class="corner" >							<case-speciale data-ma-case="$ctrl.cases[25]"></case-speciale>			</td>
+			<td id="sun" class="corner" >					<case-prop data-ma-case="$ctrl.cases[26]"></case-prop>					</td>
+			<td id="sun" class="corner" >					<case-prop data-ma-case="$ctrl.cases[27]"></case-prop>					</td>
+			<td class="corner" >							<case-speciale data-ma-case="$ctrl.cases[28]"></case-speciale>			</td>
+			<td id="sun" class="corner" >					<case-prop data-ma-case="$ctrl.cases[29]"></case-prop>					</td>
+			<td class="corner" >							<case-speciale data-ma-case="$ctrl.cases[30]"></case-speciale>			</td>
 		  </tr>
 		</thead>
 		<tbody>
 		  <tr>
-			<td id="rcy" class="corner" scope="row"><case-recyclage3 class="case-recyclage"></case-recyclage3></td>
-			<td class="none" colspan="9" rowspan="9"> <img id="monop" src="/assets/monop.png"/> </td>
-			<td id="nuke" class="corner"><case-nucleaire class="case-nuke"></case-nucleaire></td>
+			<td id="rcy" class="corner" scope="row">		<case-prop data-ma-case="$ctrl.cases[19]"></case-prop>					</td>
+			<td class="none" colspan="9" rowspan="9"> 		<img id="monop" src="/assets/monop.png"/> 								</td>
+			<td id="nuke" class="corner">					<case-prop data-ma-case="$ctrl.cases[31]"></case-prop>					</td>
 		  </tr>
 		  <tr>
-			<td id="recy" class="corner" scope="row"><case-recyclage2 class="case-recyclage"></case-recyclage2></td>
-			
-			<td id="nuke" class="corner"><case-nucleaire2 class="case-nuke"></case-nucleaire2></td>
+			<td id="recy" class="corner" scope="row">		<case-prop data-ma-case="$ctrl.cases[18]"></case-prop>					</td>
+			<td id="nuke" class="corner">					<case-prop data-ma-case="$ctrl.cases[32]"></case-prop>					</td>
 		  </tr>
 		  <tr>
-			<td class="corner" scope="row">Case</td>			
-			<td class="corner">Case</td>
+			<td class="corner" scope="row">					<case-speciale data-ma-case="$ctrl.cases[17]"></case-speciale>			</td>			
+			<td class="corner">								<case-speciale data-ma-case="$ctrl.cases[33]"></case-speciale>			</td>
 		  </tr>
 		  <tr>
-			<td id="recy" class="corner" scope="row"><case-recyclage class="case-recyclage"></case-recyclage></td>
-			<td id="nuke" class="corner"><case-nucleaire3 class="case-nucleaire"></case-nucleaire3></td>
+			<td id="recy" class="corner" scope="row">		<case-prop data-ma-case="$ctrl.cases[16]"></case-prop>					</td>
+			<td id="nuke" class="corner">					<case-prop data-ma-case="$ctrl.cases[34]"></case-prop>					</td>
 		  </tr>
 		  <tr>
-			<td class="corner" scope="row">Case</td>
-			<td class="corner" >Case</td>
+			<td class="corner" scope="row">					<case-speciale data-ma-case="$ctrl.cases[15]"></case-speciale>			</td>
+			<td class="corner" >							<case-speciale data-ma-case="$ctrl.cases[35]"></case-speciale>			</td>
 		  </tr>
 		  <tr>
-			<td id="chemistry" class="corner" scope="row"><case-chimie3 class="case-chimie"></case-chimie3></td>
-			<td class="corner" >Case</td>
+			<td id="chemistry" class="corner" scope="row">	<case-prop data-ma-case="$ctrl.cases[14]"></case-prop>					</td>
+			<td class="corner" >							<case-speciale data-ma-case="$ctrl.cases[36]"></case-speciale>			</td>
 		  </tr>
 		  <tr>
-			<td class="corner" scope="row">Case</td>
-			<td id="water" class="corner" ><case-eau class="case-eau"></case-eau></td>
+			<td class="corner" scope="row">					<case-speciale data-ma-case="$ctrl.cases[13]"></case-speciale>			</td>
+			<td id="water" class="corner" >					<case-prop data-ma-case="$ctrl.cases[37]"></case-prop>					</td>
 		  </tr>
 		  <tr>
-			<td id="chemistry" class="corner" scope="row"><case-chimie2 class="case-chimie"></case-chimie2></td>
-			<td class="corner" >Case</td>
+			<td id="chemistry" class="corner" scope="row">	<case-prop data-ma-case="$ctrl.cases[12]"></case-prop>					</td>
+			<td class="corner" >							<case-speciale data-ma-case="$ctrl.cases[38]"></case-speciale>			</td>
 		  </tr>
 		  <tr>
-			<td id="chemistry" class="corner" scope="row"><case-chimie class="case-chimie"></case-chimie></td>
-			<td id="water" class="corner"><case-eau2 class="case-eau"></case-eau2></td>
+			<td id="chemistry" class="corner" scope="row">	<case-prop data-ma-case="$ctrl.cases[11]">								</td>
+			<td id="water" class="corner">					<case-prop data-ma-case="$ctrl.cases[39]"></case-prop>					</td>
 		  </tr>
 		  <tr>
-			<td class="corner" scope="row"><prison class="prison"></prison></td>
-			<td id="wind" class="corner"><case-vent3 class="case-vent3"></case-vent3></td>
-			<td id="wind"  class="corner"><case-vent2 class="case-vent2"></case-vent2></td>
-			<td class="corner">Case</td>
-			<td id="wind"  class="corner" ><case-vent class="case-vent"></case-vent></td>
-			<td class="corner" >Case</td>
-			<td class="corner" >Case</td>
-			<td id="gaz" class="corner" ><case-gaz2 class="case-gaz2"></case-gaz2></td>
-			<td class="corner" >Case</td>
-			<td id="gaz" class="corner" ><case-gaz class="case-gaz"></case-gaz></td>
-			<td id="departure" class="corner" ><case-depart class="case-depart"></case-depart></td>
+			<td class="corner" scope="row">		<case-speciale data-ma-case="$ctrl.cases[10]"></case-speciale>						</td>
+			<td id="wind" class="corner">		<case-prop data-ma-case="$ctrl.cases[9]"></case-prop>								</td>
+			<td id="wind"  class="corner">		<case-prop data-ma-case="$ctrl.cases[8]"></case-prop>								</td>
+			<td class="corner">					<case-speciale data-ma-case="$ctrl.cases[7]"></case-speciale>						</td>
+			<td id="wind"  class="corner" >		<case-prop data-ma-case="$ctrl.cases[6]"></case-prop>								</td>
+			<td class="corner" >				<case-speciale data-ma-case="$ctrl.cases[5]"></case-speciale>						</td>
+			<td class="corner" >				<case-speciale data-ma-case="$ctrl.cases[4]"></case-speciale>						</td>
+			<td id="gaz" class="corner" >		<case-prop data-ma-case="$ctrl.cases[3]"></case-prop>								</td>
+			<td class="corner">					<case-speciale data-ma-case="$ctrl.cases[2]"></case-speciale>						</td>
+			<td id="gaz" class="corner">		<case-prop data-ma-case="$ctrl.cases[1]"></case-prop>								</td>
+			<td id="departure" class="corner">	<case-speciale data-ma-case="$ctrl.cases[0]"></case-speciale>	</td>
 		  </tr>
 		</tbody>
 		</table>

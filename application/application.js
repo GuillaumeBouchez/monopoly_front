@@ -46,11 +46,16 @@ import {caseEau2} from "./caseEau2/caseEau2Component"
 import {goPrison} from "./goPrison/goPrisonComponent"
 import {parkGratuit} from "./parkGratuit/parkGratuitComponent"
 import {joueur} from "./joueur/joueurComponent"
+import {caseSpeciale} from "./cases/caseSpecialeComponent"
+import {caseProp} from "./cases/casePropComponent"
+
 
 //Service import
 import dataService from "./dataService/dataService"
 
 angular.module('AppAngularJS', [uiBootstrap])
+	.component('caseSpeciale',caseSpeciale)
+	.component('caseProp',caseProp)
     .component('plateau', plateau)
     .component('caseDepart', caseDepart)
     .component('caseGaz', caseGaz)
