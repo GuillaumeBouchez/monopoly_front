@@ -5,6 +5,18 @@ class CasePropController {
 		this.$rootScope = $rootScope;
 		this.dataService = dataService;
 	}
+	
+	joueurSurCase(id){
+		for (var joueur in maCase.joueursSurCase){
+			console.log(joueur);
+			if (joueur.id == id){
+				return true;
+			}
+		}
+		return false;
+		
+	}
+	
 }
 
 CasePropController.$inject = ['$rootScope', 'dataService'];

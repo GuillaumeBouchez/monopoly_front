@@ -8,15 +8,10 @@
 
 <p>{{$ctrl.maCase.name}}</p>
 
-<table style="width:100%; border-collapse:collapse;">
-	<tr>
-		<td>J1</td>
-		<td>J2</td>
-	</tr>
-	<tr>
-		<td>J3</td>
-		<td>J4</td>
-	</tr>
+<table style="width:100%; border-collapse:collapse;" >
+	<tr><td ng-repeat="joueur in $ctrl.maCase.joueursSurCase">{{joueur.nom}}  </td></tr>
 </table>
+
+
 
 </div>

@@ -5,6 +5,16 @@ class CaseSpecialeController {
 		this.$rootScope = $rootScope;
 		this.dataService = dataService;
 	}
+	
+	joueurSurCase(id){
+		for (var joueur in joueursSurCase){
+			if (joueur.id == id){
+				return true;
+			}
+		}
+		return false;
+		
+	}
 }
 
 CaseSpecialeController.$inject = ['$rootScope', 'dataService'];
