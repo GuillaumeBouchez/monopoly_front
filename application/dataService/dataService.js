@@ -18,6 +18,14 @@ export default class dataService {
     getCase(idCase) {
         return this.$http.get(this.backUrl+`/cases/${idCase}`);
     }
+    
+    readNfc(){
+    	return this.$http.get(this.backUrl+ `/readNfc`);
+    }
+    
+    bougerJoueur(id, dist){
+    	return this.$http.get(this.backUrl+ `/readNfc`);
+    }
 
     //http://192.168.137.1:8080/RestServer/api/monopoly/cases/12
 

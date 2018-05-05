@@ -1,9 +1,12 @@
 import plateauHTML from "./plateau.html";
 
 class PlateauComponentController {
-	constructor(dataService) {
-		this.parkGratuitBinding = "Parking Gratuit bind";
+	constructor(dataService, servicePartie) {
 		this.dataService = dataService;
+		this.servicePartie = servicePartie;
+		console.log("construc");
+		this.partie = servicePartie.getPartie();
+		//this.servicePartie.lancePartie();
 	}
 	
 	$onInit() {
@@ -16,12 +19,21 @@ class PlateauComponentController {
             console.log('Erreur sur le tableau', error);
         })
 		
+		this.servicePartie.lanceTour();
+		this.partie = this.servicePartie.getPartie();
+		
+		
 		
 	}
 	
+	
+	
+	
+	
+	
 }
 
-PlateauComponentController.$inject = ['dataService'];
+PlateauComponentController.$inject = ['dataService','servicePartie'];
 
 export const plateau = {
 		template: plateauHTML,

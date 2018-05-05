@@ -1,12 +1,12 @@
 <div ng-style ="{'border' : '0 px'}">
-<table style="width:100%;">
+<table style="width:100%; text-align=center;">
 	<tr>
-		<td ng-style ="{'background-color' : 'red'}"><!-- on mettra la couleur de zone provenant de la case (à ajouter dans entite)-->
-		</td>
+		<td ng-style ="{'background-color' : 'red'}"></td><!-- on mettra la couleur de zone provenant de la case (à ajouter dans entite)-->
+	</tr>
+	<tr>
+		<td>{{$ctrl.maCase.name}}</td>
 	</tr>
 </table>
-
-<p>{{$ctrl.maCase.name}}</p>
 
 <table style="width:100%; border-collapse:collapse;" >
 	<tr><td ng-repeat="joueur in $ctrl.maCase.joueursSurCase">{{joueur.nom}}  </td></tr>

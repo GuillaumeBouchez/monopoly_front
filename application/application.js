@@ -50,8 +50,10 @@ import {caseSpeciale} from "./cases/caseSpecialeComponent"
 import {caseProp} from "./cases/casePropComponent"
 
 
+
 //Service import
 import dataService from "./dataService/dataService"
+import servicePartie from "./servicePartie/servicePartie"
 
 angular.module('AppAngularJS', [uiBootstrap])
 	.component('caseSpeciale',caseSpeciale)
@@ -86,6 +88,7 @@ angular.module('AppAngularJS', [uiBootstrap])
     .component('joueur', joueur)
     
     .service("dataService", dataService)
+    .service("servicePartie", servicePartie)
 
     .run(['$rootScope', ($rootScope) => {
         // set owner from configuration file
