@@ -1,15 +1,22 @@
-<div ng-style ="{'border' : '0 px'}">
+<div ng-attr-id={{$ctrl.rotation}}>
 <table style="width:100%; text-align=center;">
 	<tr>
-		<td ng-style ="{'background-color' : 'red'}"></td><!-- on mettra la couleur de zone provenant de la case (à ajouter dans entite)-->
+		<td ng-style ="{'background-color' : $ctrl.color}"></td><!-- on mettra la couleur de zone provenant de la case (à ajouter dans entite)-->
 	</tr>
-	<tr>
+	<tr class ="text-center">
 		<td>{{$ctrl.maCase.name}}</td>
 	</tr>
 </table>
 
-<table style="width:100%; border-collapse:collapse;" >
-	<tr><td ng-repeat="joueur in $ctrl.maCase.joueursSurCase">{{joueur.nom}}  </td></tr>
+<table>
+	<tr>
+		<td>{{$ctrl.maCase.joueursSurCase[0].nom}}</td>
+		<td>{{$ctrl.maCase.joueursSurCase[1].nom}}</td>
+	</tr>
+	<tr>
+		<td>{{$ctrl.maCase.joueursSurCase[2].nom}}</td>
+		<td>{{$ctrl.maCase.joueursSurCase[3].nom}}</td>
+	</tr>
 </table>
 
 
@@ -18,7 +25,4 @@
 		<span>{{$ctrl.maCase.prixAchat}} W</span>
 	</div>
 </footer>
-
-
-
 </div>

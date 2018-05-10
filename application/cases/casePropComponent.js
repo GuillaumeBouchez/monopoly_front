@@ -25,6 +25,8 @@ export const caseProp = {
 	template: casePropHTML,
 	controller: CasePropController,
 	bindings: {
-		maCase: '<'
+		maCase: '<',
+		color :'@',
+		rotation : '@'
 	}
 };

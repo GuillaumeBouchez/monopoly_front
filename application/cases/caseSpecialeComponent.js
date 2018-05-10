@@ -23,6 +23,7 @@ export const caseSpeciale = {
 	template: caseSpecialeHTML,
 	controller: CaseSpecialeController,
 	bindings: {
-		maCase: '<'
+		maCase: '<',
+		rotation : '@'
 	}
 };

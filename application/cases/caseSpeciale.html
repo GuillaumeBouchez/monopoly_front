@@ -1,5 +1,14 @@
-<p>{{$ctrl.maCase.nom}}</p>
+<div ng-attr-id={{$ctrl.rotation}}>
+	<p class = "text-center">{{$ctrl.maCase.nom}}</p>
 
-<table style="width:100%; border-collapse:collapse;" >
-	<tr><td ng-repeat="joueur in $ctrl.maCase.joueursSurCase">{{joueur.nom}}  </td></tr>
-</table>
+	<table>
+		<tr>
+			<td>{{$ctrl.maCase.joueursSurCase[0].nom}}</td>
+			<td>{{$ctrl.maCase.joueursSurCase[1].nom}}</td>
+		</tr>
+		<tr>
+			<td>{{$ctrl.maCase.joueursSurCase[2].nom}}</td>
+			<td>{{$ctrl.maCase.joueursSurCase[3].nom}}</td>
+		</tr>
+	</table>
+</div>
