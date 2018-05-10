@@ -1,6 +1,6 @@
-import parkGratuitHTML from "./parkGratuit.html";
+import caisseComHTML from "./caisseCom.html";
 
-class ParkGratuitComponentController {
+class CaisseComController {
 	constructor($rootScope, dataService) {
 		this.$rootScope = $rootScope;
 		this.dataService = dataService;
@@ -10,8 +10,8 @@ class ParkGratuitComponentController {
 ParkGratuitComponentController.$inject = ['$rootScope', 'dataService'];
 
 export const parkGratuit = {
-	template: parkGratuitHTML,
-	controller: ParkGratuitComponentController,
+	template: caisseComHTML,
+	controller: CaisseComController,
 	bindings: {
 		maCase: '<'
 	}

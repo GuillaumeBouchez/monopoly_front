@@ -3,70 +3,46 @@ import plateauHTML from "./plateau.html";
 class PlateauComponentController {
 	constructor(dataService, servicePartie, $interval, $scope) {
 		this.dataService = dataService;
-		this.$scope = $scope;
-		$scope.dataService = dataService;
 		this.servicePartie = servicePartie;
-		console.log("construc");
-		this.partie = servicePartie.getPartie();
-		this.$interval = $interval;
-		this.cases = [];
-		
-		/*this.$interval(function() {
-			
-			dataService.getCases()
-			.then(data => {
-				console.log('Cases', data.data);
-				this.cases = data.data;
-			})
-			.catch(error => {
-	            console.log('Erreur sur le tableau', error);
-	        })
-			
-			console.log('REFRESH');
-			
-			
-			} , 2000);*/
 		
 	}
 	
 	$onInit() {
-			this.dataService.getCases()
-			.then(data => {
-				console.log('Cases', data.data);
-				this.cases = data.data;
-			})
-			.catch(error => {
-	            console.log('Erreur sur le tableau', error);
-	        })
-			
-			console.log('REFRESH');
-			
-			
-			/*} , 2000);*/
+		//Mise à jour des infos affichées par le front
+		this.getListeCases();
+		this.getListeJoueurs();		
 		
 	}
 	
 	onPartieChanged(){
-		console.log("udpdate Update plateau");
-		
+		//Mise à jour des infos affichées par le front
+		this.getListeCases();
+		this.getListeJoueurs();		
+	}
+	
+	//Met à jour la liste des joueurs via webservice
+	getListeJoueurs(){
+		this.dataService.getJoueurs()
+		.then(data => {
+			this.joueurs = data.data;
+		})
+		.catch(error => {
+            console.log('Erreur sur le tableau', error);
+        })
+	}
+	
+	//Met à jour la liste des cases du plateau
+	getListeCases(){
 		this.dataService.getCases()
 		.then(data => {
-			console.log('Cases', data.data);
 			this.cases = data.data;
 		})
 		.catch(error => {
             console.log('Erreur sur le tableau', error);
         })
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-}
+
+}//Fin Controller
 
 PlateauComponentController.$inject = ['dataService','servicePartie','$interval', '$scope'];
 

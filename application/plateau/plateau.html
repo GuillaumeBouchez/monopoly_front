@@ -1,22 +1,29 @@
 <div class="container">
 
-	<joueur></joueur>
-
-	<!-- <table>
+	<table class="table">
 		<thead>
-			<tr ng-repeat="case in $ctrl.cases">
-				<td>
-					id : {{case.idCase}}
-				</td>
-				<td>
-					Type : {{case.typeCase}}
-				</td>
-				<td>
-					Nom : {{case.nom}}
-				</td>
+			<tr>
+				<td>ID</td>
+				<td>Position</td>
+				<td>Nom</td>
+				<td>Pion</td>
+				<td>Solde</td>
+				<td>Cartes</td>
+				<td>Propriétés</td>	
 			</tr>
-			</thead>
-	</table> -->
+		</thead>
+		<tbody>
+			<tr ng-repeat="joueur in $ctrl.joueurs">
+				<td>{{joueur.id}}</td>
+				<td>{{joueur.position}}</td>
+				<td>{{joueur.nom}}</td>
+				<td>{{joueur.pion}}</td>
+				<td>{{joueur.solde}}</td>
+				<td>{{joueur.listeCarte}}</td>
+				<td>{{joueur.listePropriete}}</td>
+			</tr>
+		</tbody>
+	</table>
 
 	<table id="board" class="table table-bordered">
 		<thead>

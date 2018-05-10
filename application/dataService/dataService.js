@@ -10,6 +10,11 @@ export default class dataService {
        // return this.$http.get("http://localhost:8081/RestServer/api/monopoly/joueurs");
         return this.$http.get(this.backUrl+"/joueurs");
     }
+    
+    getJoueur(id){
+    	return this.$http.get(this.backUrl+`/joueurs/${id}`);
+    }
+    
 
     getCases() {
         return this.$http.get(this.backUrl+"/cases");
@@ -20,11 +25,16 @@ export default class dataService {
     }
     
     readNfc(){
+    	
     	return this.$http.get(this.backUrl+ `/readNfc`);
     }
     
     bougerJoueur(id, dist){
     	return this.$http.get(this.backUrl+ `/deplacement`, {params : {idJoueur : id, resultDes : dist}});
+    }
+    
+    achatProp(laCase, joueur){
+    	return this.$http.get(this.backUrl+ `/achat`, {params : {idCase : laCase, idJoueur : joueur}});
     }
 
 }
