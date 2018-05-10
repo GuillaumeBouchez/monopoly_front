@@ -1,44 +1,68 @@
 export default class servicePartie {
 
-    constructor(dataService) {
+    constructor(dataService, $rootScope) {
     	this.dataService = dataService;
     	this.partie = {tourJoueur : 1, message : "Lancez les dés"};
+    	this.goNextStep = false;
+    	this.$rootScope = $rootScope;
+    	
+    	this.$rootScope.$on('nfcEvent', function() {
+    		console.log('NFC EVENT');
+    	});
     }
+    
     
     getPartie(){
     	return this.partie;
     }
     
     lancerDes(){
-    	//Faire des nombres aléatoires + déplacer joueur
+    	//Faire des nombres aléatoires + déplacer joueur 
+    	
+    	//while(this.goNextStep == false){
+    	
     	this.dataService.readNfc()
     		.then((data) => {
     			console.log(data.data);
     			
-    			if (data.data == "code nfc de" | true){
+    			if (data.data == "code nfc de"){
+    				//tirage de
     		    	this.de1 = 2;
     		    	this.de2 = 1;
     		    	
     		    	this.partie.message = "De 1 = "+ this.de1 + "  De 2 = "+ this.de2;
     		    	
-    		    	
-    		    	
-    		    	console.log(this.partie);
-    			} //true pour test
+    			}
     			
     		})
     		.catch((error) => {
     			console.log(error);
     		});
+    			
+    	//}
     
     }
-    
-    reagit
     
     lanceTour(){
     	this.lancerDes();
     }
     
+    
+    listen2nfc(){
+    	this.dataService.readNfc()
+		.then((data) => {
+			this.$rootScope.$broadcast('nfcEvent');
+			console.log(data.data);	
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+    	
+    }
+
+	/*$rootScope.$on('nfcEvent', function() {
+		console.log('NFC EVENT');
+	})*/
     
 
     
@@ -47,4 +71,4 @@ export default class servicePartie {
     }
 
 }
-servicePartie.$inject = ['dataService'];
+servicePartie.$inject = ['dataService', '$rootScope'];

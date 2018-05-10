@@ -48,6 +48,7 @@ import {parkGratuit} from "./parkGratuit/parkGratuitComponent"
 import {joueur} from "./joueur/joueurComponent"
 import {caseSpeciale} from "./cases/caseSpecialeComponent"
 import {caseProp} from "./cases/casePropComponent"
+import {partie} from "./servicePartie/partieComponent"
 
 
 
@@ -86,6 +87,7 @@ angular.module('AppAngularJS', [uiBootstrap])
     .component('goPrison', goPrison)
     .component('parkGratuit', parkGratuit)
     .component('joueur', joueur)
+    .component('partie', partie)
     
     .service("dataService", dataService)
     .service("servicePartie", servicePartie)

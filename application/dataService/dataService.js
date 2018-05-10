@@ -24,10 +24,8 @@ export default class dataService {
     }
     
     bougerJoueur(id, dist){
-    	return this.$http.get(this.backUrl+ `/readNfc`);
+    	return this.$http.get(this.backUrl+ `/deplacement`, {params : {idJoueur : id, resultDes : dist}});
     }
-
-    //http://192.168.137.1:8080/RestServer/api/monopoly/cases/12
 
 }
 dataService.$inject = ['$http'];
