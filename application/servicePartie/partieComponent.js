@@ -65,7 +65,36 @@ class PartieComponentController {
 					
 				
 			}else if (data.data.typeCase != "PROPRIETE"){
-				this.lanceTourSuivant();
+				this.dataService.caseSpeciale(this.joueur.position, this.joueur.id)
+					.then(data => {
+						console.log(data);
+						this.message = data.data; 
+					})
+					.catch(error => {
+						console.log(error);
+					})
+				
+				this.partieChanged();
+				this.sleep(5000)
+					.then(() => {this.lanceTourSuivant();})
+				
+			
+			}else if (data.data.idJoueur != 0){
+				//Paye connard
+				this.message = "TRANSACTION de " + this.joueur.id + " vers " + data.data.idJoueur + " montant = " +  data.data.loyer;
+				console.log(this.message);
+				this.dataService.transaction(this.joueur.id, data.data.idJoueur, data.data.loyer)
+					.then(data => {
+						this.message = "TRANSACTION EFFECTUEE";
+						this.sleep(5000);
+						this.partieChanged();
+						
+						this.lanceTourSuivant();
+						
+					}).catch(error => {
+						
+					});
+
 			}
 			
 			
@@ -125,7 +154,7 @@ class PartieComponentController {
 		
 				if (data.data == this.codeNfcDe){
 					//On tire les dés
-					this.de1 = 2;
+					this.de1 = 1;
 					this.de2 = 1;
 					this.message = "De 1 = "+ this.de1 + "  De 2 = "+ this.de2;
 					

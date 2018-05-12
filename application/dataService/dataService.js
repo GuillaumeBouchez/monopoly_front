@@ -36,6 +36,14 @@ export default class dataService {
     achatProp(laCase, joueur){
     	return this.$http.get(this.backUrl+ `/achat`, {params : {idCase : laCase, idJoueur : joueur}});
     }
+    
+    caseSpeciale(laCase, joueur){
+    	return this.$http.get(this.backUrl+ `/case-speciale`, {params : {idCase : laCase, idJoueur : joueur}});
+    }
+    
+    transaction(j1, j2, _montant){
+    	return this.$http.get(this.backUrl+ `/transaction`, {params : {idJoueur1 : j1, idJoueur2 : j2, montant: _montant}});
+    }
 
 }
 dataService.$inject = ['$http'];
