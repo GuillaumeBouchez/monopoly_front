@@ -146,7 +146,7 @@ class PartieComponentController {
 	
 	lancerDes(){
 		//On attend que le joueur place la carte dé
-		this.message = "Lancez le dés";
+		this.message = "Lancez les dés";
     	this.dataService.readNfc()
 			.then((data) => {
 				console.log('Resultat lecture NFC : '+ data.data);
@@ -154,8 +154,8 @@ class PartieComponentController {
 		
 				if (data.data == this.codeNfcDe){
 					//On tire les dés
-					this.de1 = 1;
-					this.de2 = 1;
+					this.de1 = Math.floor((Math.random() * 6) + 1);
+					this.de2 = Math.floor((Math.random() * 6) + 1);
 					this.message = "De 1 = "+ this.de1 + "  De 2 = "+ this.de2;
 					
 					console.log('Resultat dés' + (this.de1 + this.de2));
