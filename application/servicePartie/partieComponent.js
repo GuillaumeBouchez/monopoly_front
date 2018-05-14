@@ -4,7 +4,7 @@ class PartieComponentController {
 	constructor(dataService, servicePartie) {
 		this.dataService = dataService;
 		this.servicePartie = servicePartie;
-		this.codeNfcDe = "5F 0B C2 C0";
+		this.codeNfcDe = "04 78 06 7A 99 3C 84";
 		this.codeNfcOui = "04 21 73 2A AD 43 80";
 		
 	}
