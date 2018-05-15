@@ -42,16 +42,14 @@
 				<case-prop data-ma-case="$ctrl.cases[19]" color="orange" rotation="rotate90"></case-prop>
 			</td>
 			<td class="none" colspan="9" rowspan="9">
-				<!--  <img id="monop" src="/assets/monop.png"/>-->
+
 				<partie partie-changed="$ctrl.onPartieChanged()"></partie>
 
-				<table class="table">
+				<table id="resume" class="table table-striped">
 					<thead>
 						<tr>
 							<td>ID</td>
-							<td>Position</td>
 							<td>Nom</td>
-							<td>Pion</td>
 							<td>Solde</td>
 							<td>Cartes</td>
 							<td>Propriétés</td>
@@ -60,23 +58,25 @@
 					<tbody>
 						<tr ng-repeat="joueur in $ctrl.joueurs">
 							<td>{{joueur.id}}</td>
-							<td>{{joueur.position}}</td>
 							<td>{{joueur.nom}}</td>
-							<td>{{joueur.pion}}</td>
 							<td>{{joueur.solde}}</td>
 							<td>{{joueur.listeCarte}}</td>
 							<td>{{joueur.listePropriete}}</td>
 						</tr>
+
 					</tbody>
 				</table>
 
+				<img id="monop" src="/assets/monop.png" />
+
 			</td>
+
 			<td id="nuke" class="corner">
 				<case-prop data-ma-case="$ctrl.cases[31]" color="#2EFE2E" rotation="rotate270"></case-prop>
 			</td>
 		</tr>
 		<tr>
-			<td class="corner" scope="row">
+			<td id="recy" class="corner" scope="row">
 				<case-prop data-ma-case="$ctrl.cases[18]" color="orange" rotation="rotate90"></case-prop>
 			</td>
 			<td id="nuke" class="corner">
@@ -84,7 +84,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="corner" scope="row">
+			<td id="special" class="corner" scope="row">
 				<case-speciale data-ma-case="$ctrl.cases[17]" rotation="rotate90"></case-speciale>
 			</td>
 			<td class="corner">
@@ -100,7 +100,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="corner" scope="row">
+			<td id="special" class="corner" scope="row">
 				<case-speciale data-ma-case="$ctrl.cases[15]" rotation="rotate90"></case-speciale>
 			</td>
 			<td class="corner">
@@ -116,7 +116,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="corner" scope="row">
+			<td id="special" class="corner" scope="row">
 				<case-speciale data-ma-case="$ctrl.cases[13]" rotation="rotate90"></case-speciale>
 			</td>
 			<td id="water" class="corner">
