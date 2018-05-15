@@ -1,14 +1,28 @@
 <div ng-attr-id={{$ctrl.rotation}}>
-	<p class = "text-center">{{$ctrl.maCase.nom}}</p>
+	<!--<p class = "text-center">{{$ctrl.maCase.nom}}</p>-->
 
-	<table>
-		<tr>
-			<td>{{$ctrl.maCase.joueursSurCase[0].nom}}</td>
-			<td>{{$ctrl.maCase.joueursSurCase[1].nom}}</td>
-		</tr>
-		<tr>
-			<td>{{$ctrl.maCase.joueursSurCase[2].nom}}</td>
-			<td>{{$ctrl.maCase.joueursSurCase[3].nom}}</td>
+	<table id="title" class="table table-bordered" style="width:100%; text-align:center;">
+		<tr class="text-center">
+			<span id="special">Prank</span>
+			<td>{{$ctrl.maCase.nom}}</td>
 		</tr>
 	</table>
+
+	<table id="virer_carre_blanc" class="table table-bordered">
+		<tr>
+			<td id="special_case">{{$ctrl.maCase.joueursSurCase[0].nom}}</td>
+			<td id="special_case">{{$ctrl.maCase.joueursSurCase[1].nom}}</td>
+		</tr>
+		<tr>
+			<td id="special_case">{{$ctrl.maCase.joueursSurCase[2].nom}}</td>
+			<td id="special_case">{{$ctrl.maCase.joueursSurCase[3].nom}}</td>
+		</tr>
+	</table>
+
+	<footer class="footer">
+		<div class="text-center">
+			<span id="special">Prank</span>
+		</div>
+	</footer>
+
 </div>

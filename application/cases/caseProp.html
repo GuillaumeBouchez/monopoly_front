@@ -1,28 +1,25 @@
 <div ng-attr-id={{$ctrl.rotation}}>
-<table style="width:100%; text-align=center;">
-	<tr>
-		<td ng-style ="{'background-color' : $ctrl.color}"></td><!-- on mettra la couleur de zone provenant de la case (à ajouter dans entite)-->
-	</tr>
-	<tr class ="text-center">
-		<td>{{$ctrl.maCase.name}}</td>
-	</tr>
-</table>
+	<table class="table table-bordered" style="width:100%; text-align:center;" ng-style="{'background-color' : $ctrl.color}">
+		<tr class="text-center">
+			<td>{{$ctrl.maCase.name}}</td>
+		</tr>
+	</table>
 
-<table>
-	<tr>
-		<td>{{$ctrl.maCase.joueursSurCase[0].nom}}</td>
-		<td>{{$ctrl.maCase.joueursSurCase[1].nom}}</td>
-	</tr>
-	<tr>
-		<td>{{$ctrl.maCase.joueursSurCase[2].nom}}</td>
-		<td>{{$ctrl.maCase.joueursSurCase[3].nom}}</td>
-	</tr>
-</table>
+	<table id="regular_case" class="table table-bordered">
+		<tr>
+			<td class="player_border">{{$ctrl.maCase.joueursSurCase[0].nom}}</td>
+			<td class="player_border">{{$ctrl.maCase.joueursSurCase[1].nom}}</td>
+		</tr>
+		<tr>
+			<td class="player_border">{{$ctrl.maCase.joueursSurCase[2].nom}}</td>
+			<td class="player_border">{{$ctrl.maCase.joueursSurCase[3].nom}}</td>
+		</tr>
+	</table>
 
 
-<footer class = "footer">
-	<div class = "text-center">
-		<span>{{$ctrl.maCase.prixAchat}} W</span>
-	</div>
-</footer>
+	<footer class="footer">
+		<div class="text-center">
+			<span>{{$ctrl.maCase.prixAchat}} W</span>
+		</div>
+	</footer>
 </div>
