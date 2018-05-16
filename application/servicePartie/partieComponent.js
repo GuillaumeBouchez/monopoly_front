@@ -6,6 +6,8 @@ class PartieComponentController {
 		this.servicePartie = servicePartie;
 		this.codeNfcDe = "04 78 06 7A 99 3C 84";
 		this.codeNfcOui = "04 21 73 2A AD 43 80";
+		this.codeNfcNon = "04 F0 D1 81 A0 22 80";
+		this.carteNfcSortiePrison = "9B 07 CD 18";
 		
 	}
 	
@@ -53,6 +55,10 @@ class PartieComponentController {
 							this.acheterProp(this.joueur.position, this.joueur.id);
 							
 						}else{
+							while(data.data != this.codeNfcNon){
+								this.message = "Veuillez scanner la carte de refus";
+								data.data = this.dataService.readNfc();
+							}
 							console.log('Le joueur ne veut pas acheter');
 							this.partieChanged();
 							this.lanceTourSuivant();
@@ -96,6 +102,46 @@ class PartieComponentController {
 					});
 
 			}
+			//cas de la prison
+			else if(data.data.idCase == 30){
+				this.dataService.readNfc()
+				.then(data =>{
+					if(data.data == this.joueur.nfcTag){
+						this.message = "Vous payez l'amende de 5000W";
+						this.dataService.amendePrison(this.joueur.id)
+						.then(data =>{
+							this.message = "Vous avez payer l'amende, vous pouvez sortir de prison";
+							this.sleep(5000);
+							this.partieChanged();
+							this.lanceTourSuivant();
+						})
+						.catch(error =>{
+							this.message = "Vous n'avez pas assez d'argent pour payer l'amende";
+						})
+					}
+					else if(data.data == this.carteNfcSortiePrison){
+						this.message = "Vous utilisez une carte sortie de prison";
+						this.dataService.carteSortiePrison(this.joueur.id)
+						.then(data =>{
+							this.message = "Vous utilisez votre carte sortie de prison";
+							this.sleep(5000);
+							this.partieChanged();
+							this.lanceTourSuivant();
+						})
+						.catch(error=>{
+							this.message = "Vous n'avez pas de carte sortie de prison";
+						})
+					}
+					else if(data.data == this.carteNfcNon){
+						this.message = "Vous ne faite aucune action";
+						this.sleep(5000);
+						this.lanceTourSuivant();
+					}
+				})
+				.catch(error =>{
+					this.evalueCase(idCase);
+				})
+			}
 			
 			
 			
@@ -116,7 +162,7 @@ class PartieComponentController {
 				this.partieChanged();
 		
 			}else{
-				console.log("propriété non achétée");
+				console.log("propriété non achetée");
 				this.message = "Achat impossible";
 				this.lanceTourSuivant();
 			}
