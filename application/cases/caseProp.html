@@ -19,7 +19,8 @@
 
 	<footer class="footer">
 		<div class="text-center">
-			<span>{{$ctrl.maCase.prixAchat}} W</span>
+			<span>{{$ctrl.maCase.prixAchat}} W</span><br>
+		<span ng-if = "$ctrl.maCase.idJoueur != 0">!VENDU!</span>
 		</div>
 	</footer>
 </div>
