@@ -31,8 +31,6 @@ class PartieComponentController {
 		}
 		console.log('tour joueur ' + this.tourJoueur);
 		this.getJoueur(this.tourJoueur);
-
-
 	}
 
 	evalueCase(idCase){
@@ -145,7 +143,12 @@ class PartieComponentController {
 			console.log(data.data);
 			this.joueur = data.data;
 			//On a recupere le joueur, on peut lancer les des
-			this.lancerDes();
+			if(this.joueur.estElimine == true){
+				this.lanceTourSuivant();
+			}
+			else{
+				this.lancerDes();
+			}
 		})
 		.catch(error => {
 			console.log('Erreur recupération joueur', error);
