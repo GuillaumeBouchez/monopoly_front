@@ -2,8 +2,7 @@ export default class dataService {
 
     constructor($http) {
         this.$http = $http;
-        /*this.backUrl = "http://localhost:8081/RestServer/api/monopoly";*/
-        this.backUrl = "http://192.168.43.128:8081/RestServer/api/monopoly";
+        this.backUrl = "http://localhost:8081/RestServer/api/monopoly";
     }
 
     //get all the player
