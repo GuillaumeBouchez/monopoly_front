@@ -45,27 +45,31 @@
 
 				<partie partie-changed="$ctrl.onPartieChanged()"></partie>
 
-				<table id="resume" class="table table-striped">
-					<thead>
-						<tr>
-							<td>ID</td>
-							<td>Nom</td>
-							<td>Solde</td>
-							<td>Cartes</td>
-							<td>Propriétés</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="joueur in $ctrl.joueurs">
-							<td>{{joueur.id}}</td>
-							<td>{{joueur.nom}}</td>
-							<td>{{joueur.solde}}</td>
-							<td>{{joueur.listeCarte}}</td>
-							<td>{{joueur.listePropriete}}</td>
-						</tr>
+				<div id="table-size">
 
-					</tbody>
-				</table>
+					<table id="resume" class="table table-striped">
+						<thead>
+							<tr>
+								<td>ID</td>
+								<td>Nom</td>
+								<td>Solde</td>
+								<td>Cartes</td>
+								<td>Propriétés</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="joueur in $ctrl.joueurs">
+								<td>{{joueur.id}}</td>
+								<td>{{joueur.nom}}</td>
+								<td>{{joueur.solde}}</td>
+								<td>{{joueur.listeCarte}}</td>
+								<td>{{joueur.listePropriete}}</td>
+							</tr>
+
+						</tbody>
+					</table>
+
+				</div>
 
 				<img id="monop" src="/assets/monop.png" />
 

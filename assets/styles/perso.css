@@ -16,6 +16,11 @@ body {
 	height: 200px !important;
 }
 
+#table_size {
+	height: 100% !important;
+	width: 100% !important;
+}
+
 .corner {
 	border-top: 1px solid black !important;
 	border-right : 1px solid black !important;
@@ -95,7 +100,7 @@ body {
 
 #monop {
 	height: 40% !important;
-	margin-left: 21% !important;
+	margin-left: 15% !important;
 	margin-top: 5% !important;
 	transform: rotate(-25deg) !important;
 }
@@ -109,6 +114,8 @@ body {
 
 #resume {
 	margin-top: 3% !important;
+	margin-left: 7% !important;
+	width: 85% !important;
 }
 
 #underline {
@@ -219,6 +226,13 @@ body {
 		transform: rotate(270deg);
 		position: relative !important;
 		top: 40px !important;
+	}
+
+	#monop {
+		height: 35% !important;
+		margin-left: 5% !important;
+		margin-top: 5% !important;
+		transform: rotate(-25deg) !important;
 	}
 
 }
