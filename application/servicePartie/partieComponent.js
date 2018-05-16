@@ -98,7 +98,11 @@ class PartieComponentController {
 					this.lanceTourSuivant();
 
 				}).catch(error => {
-
+					this.message = "Les cartes scannées ne sont pas les bonnes. Réessayez";
+					this.sleep(3000)
+					.then(()=>{
+						this.evalueCase(idCase);
+					});
 				});
 
 			}
