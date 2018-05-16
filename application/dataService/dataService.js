@@ -45,14 +45,6 @@ export default class dataService {
     transaction(j1, j2, _montant){
     	return this.$http.get(this.backUrl+ `/transaction`, {params : {idJoueur1 : j1, idJoueur2 : j2, montant: _montant}});
     }
-    
-    amendePrison(idJoueur){
-    	return this.$http.get(this.backUrl +`/payerPrison/$idJoueur`);
-    }
-    
-    carteSortiePrison(idJoueur){
-    	return this.$http.get(this.backUrl +`/carte-prison/$idJoueur`);
-    }
 
 }
 dataService.$inject = ['$http'];
