@@ -100,7 +100,7 @@ body {
 
 #monop {
 	height: 40% !important;
-	margin-left: 10% !important;
+	margin-left: 15% !important;
 	margin-top: 5% !important;
 	transform: rotate(-25deg) !important;
 }
@@ -232,7 +232,6 @@ body {
 		height: 35% !important;
 		margin-left: 5% !important;
 		margin-top: 5% !important;
-		margin-bottom: -5% !important;
 		transform: rotate(-25deg) !important;
 	}
 
