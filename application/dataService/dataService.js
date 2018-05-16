@@ -3,7 +3,7 @@ export default class dataService {
     constructor($http) {
         this.$http = $http;
         /*this.backUrl = "http://localhost:8081/RestServer/api/monopoly";*/
-        this.backUrl = "http://192.168.137.1:8081/RestServer/api/monopoly";
+        this.backUrl = "http://192.168.43.128:8081/RestServer/api/monopoly";
     }
 
     //get all the player
@@ -30,8 +30,8 @@ export default class dataService {
     	return this.$http.get(this.backUrl+ `/readNfc`);
     }
     
-    bougerJoueur(id, dist){
-    	return this.$http.get(this.backUrl+ `/deplacement`, {params : {idJoueur : id, resultDes : dist}});
+    bougerJoueur(id, des1, des2){
+    	return this.$http.get(this.backUrl+ `/deplacement`, {params : {idJoueur : id, des1 : des1, des2 : des2}});
     }
     
     achatProp(laCase, joueur){
@@ -47,11 +47,11 @@ export default class dataService {
     }
     
     amendePrison(idJoueur){
-    	return this.$http.get(this.backUrl +`/payerPrison/$idJoueur`);
+    	return this.$http.get(this.backUrl +`/amende-prison/${idJoueur}`);
     }
     
     carteSortiePrison(idJoueur){
-    	return this.$http.get(this.backUrl +`/carte-prison/$idJoueur`);
+    	return this.$http.get(this.backUrl +`/carte-prison/${idJoueur}`);
     }
 
 }

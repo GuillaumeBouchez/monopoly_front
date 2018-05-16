@@ -25,6 +25,7 @@ class PlateauComponentController {
 		this.dataService.getJoueurs()
 		.then(data => {
 			this.joueurs = data.data;
+			console.log(data.data);
 		})
 		.catch(error => {
             console.log('Erreur sur le tableau', error);
